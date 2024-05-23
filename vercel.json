@@ -1,14 +1,18 @@
 {
-  "projects": [
+  "builds": [
     {
-      "name": "client",
-      "source": "./client",
-      "target": "client"
+      "src": "server/src/**/*.ts",
+      "use": "@vercel/node"
     },
     {
-      "name": "server",
-      "source": "./server",
-      "target": "server"
+      "src": "client/**",
+      "use": "@vercel/static-build"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
     }
   ]
 }
