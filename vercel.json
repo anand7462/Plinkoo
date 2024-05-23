@@ -1,0 +1,14 @@
+{
+  "projects": [
+    {
+      "name": "client",
+      "source": "./client",
+      "target": "client"
+    },
+    {
+      "name": "server",
+      "source": "./server",
+      "target": "server"
+    }
+  ]
+}
