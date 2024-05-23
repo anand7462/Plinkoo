@@ -23,7 +23,7 @@ export class BallManager {
     }
 
     addBall(startX?: number) {
-        const newBall = new Ball(startX || pad(WIDTH / 2 + 13), pad(50), ballRadius, 'red', this.ctx, this.obstacles, this.sinks, (index) => {
+        const newBall = new Ball(startX || pad(WIDTH / 2 + 13), pad(50), ballRadius, 'yellow', this.ctx, this.obstacles, this.sinks, (index) => {
             this.balls = this.balls.filter(ball => ball !== newBall);
             this.onFinish?.(index, startX)
         });
