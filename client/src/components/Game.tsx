@@ -24,6 +24,9 @@ export function Game() {
                     ballManager.addBall(response.data.point);
                 }
             }}>Add ball</button>
+            <div className="text-white">
+                hello lode
+            </div>
         </div>
     )
 }

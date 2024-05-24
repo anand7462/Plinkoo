@@ -7,7 +7,7 @@ export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
   return (
-    <nav className="bg-white z-50 border-gray-200 dark:bg-[#262522] borbder-b shadow-lg">
+    <nav className="bg-white z-50 border-gray-200 dark:bg-[#2a1f2e] borbder-b shadow-lg">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link
           to="/"
@@ -19,7 +19,7 @@ export const Navbar = () => {
             alt="plinkoo Logo"
           />
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-            Play Plinko Game
+            Play Plinko
           </span>
         </Link>
         <Button
