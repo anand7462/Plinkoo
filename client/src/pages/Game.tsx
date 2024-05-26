@@ -11,7 +11,9 @@ export function Game() {
 
   useEffect(() => {
     if (canvasRef.current) {
-      const bm = new BallManager(canvasRef.current as unknown as HTMLCanvasElement);
+      const bm = new BallManager(
+        canvasRef.current as unknown as HTMLCanvasElement
+      );
       setBallManager(bm);
     }
   }, [canvasRef]);
@@ -25,7 +27,9 @@ export function Game() {
       const newMultiplier = response.data.multiplier;
       // Update the multipliers array to keep only the last 4
       setMultipliers((prevMultipliers) => {
-        const updatedMultipliers = [...prevMultipliers, newMultiplier].slice(-4);
+        const updatedMultipliers = [...prevMultipliers, newMultiplier].slice(
+          -4
+        );
         return updatedMultipliers;
       });
     }
@@ -38,11 +42,18 @@ export function Game() {
         Add ball
       </Button>
       <div className="px-10 mb-10">
-        <ul>
-          {multipliers.map((multiplier, index) => (
-            <li key={index}>{multiplier}</li>
-          ))}
-        </ul>
+        <p className="text-2xl mb-2">Last 4 multipliers:</p>
+        <button
+          className={`px-2 py-2 text-2xl bg-yellow-500  text-white font-bold rounded`}
+        >
+          <ul className="multiplier-list">
+            {multipliers.map((multiplier, index) => (
+              <li key={index} className="multiplier-item">
+                {multiplier}
+              </li>
+            ))}
+          </ul>
+        </button>
       </div>
     </div>
   );
